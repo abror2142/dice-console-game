@@ -105,7 +105,7 @@ class GameAbstraction:
 
             # Computer chooses a dice from reminded dices
             reminded_dices = [self.dices[i] for i in range(len(self.dices)) if i != user_dice_choice]
-            cp_dice_choice = self.computer_dice_choice(reminded_dices)
+            cp_dice_choice = self.computer_chooses_dice(reminded_dices)
 
             # User's turn: He/she rolls his/her dice
             mod = self.user_rolls(limit)
@@ -114,7 +114,7 @@ class GameAbstraction:
 
             # Computer's turn: Computer rolls its dice
             mod = self.computer_rolls(limit)
-            cp_num = self.dices[cp_dice_choice][mod]
+            cp_num = reminded_dices[cp_dice_choice][mod]
             print("My throw is", cp_num)
 
             # Print result
@@ -136,7 +136,7 @@ class GameAbstraction:
 
             # User rolls his/her dice
             mod = self.user_rolls(limit)
-            user_num = self.dices[user_dice_choice][mod]
+            user_num = reminded_dices[user_dice_choice][mod]
             print("Your throw is", user_num)
 
             # Print Result
