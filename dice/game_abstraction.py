@@ -73,7 +73,7 @@ class GameAbstraction:
         print(f"(KEY={credentials['key']}).")
         # Find mod for "fair choice"
         [_, mod] = divmod(credentials['value'] + user_choice, limit)
-        print(f"The result is {credentials['value']} + {user_choice} = {credentials['value'] + user_choice} mod(6)")
+        print(f"The result is {credentials['value']} + {user_choice} = {mod} (mod 6)")
         return mod
 
     def user_rolls(self, limit):
@@ -93,7 +93,7 @@ class GameAbstraction:
         print(f"(KEY={credentials['key']}).")
         # Find mod to make "a fair choice"
         [_, mod] = divmod(credentials['value'] + user_choice, limit)
-        print(f"The result is {credentials['value']} + {user_choice} = {credentials['value'] + user_choice} mod(6)")
+        print(f"The result is {credentials['value']} + {user_choice} = {mod} (mod 6)")
         return mod
 
     def start_game(self):
