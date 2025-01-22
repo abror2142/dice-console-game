@@ -40,7 +40,7 @@ class GameAbstraction:
         if cp_num > user_num:
             print(f"I win {cp_num} > {user_num}!")
         elif cp_num < user_num:
-            print(f"I win {cp_num} < {user_num}!")
+            print(f"You win {cp_num} < {user_num}!")
         else:
             print(f"Draw {cp_num} = {user_num}!")
 
@@ -118,7 +118,7 @@ class GameAbstraction:
             print("My throw is", cp_num)
 
             # Print result
-            self.print_result(cp_num, user_num)
+            self.print_result(int(cp_num), int(user_num))
 
         else:
             # Computer chooses a dice
@@ -140,4 +140,4 @@ class GameAbstraction:
             print("Your throw is", user_num)
 
             # Print Result
-            self.print_result(cp_num, user_num)
+            self.print_result(int(cp_num), int(user_num))
